@@ -53,10 +53,16 @@
     <td>|</td>
     <td><a href="/registration-url-path/userList">Search</a></td>
     <td>|</td>
+        <sec:authorize access="hasAnyAuthority('ADMIN', 'USER')">
+
+            <td><a href="/user/fileUpload">Upload File</a></td>
+            <td>|</td>
+        </sec:authorize>
         <sec:authorize access="hasAuthority('ADMIN')">
     <td><a href="/admin/home">Admin Home</a></td>
         </sec:authorize>
         <td>|</td>
+
         <td><a href="/user/profile">Profile</a></td>
     </tr>
 </table>

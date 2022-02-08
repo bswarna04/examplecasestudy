@@ -1,8 +1,10 @@
-<html>
-<head>
-    <title>indexsubmitpage</title>
-</head>
-<body>
+<%--<html>--%>
+<%--<head>--%>
+<%--    <title>indexsubmitpage</title>--%>
+<%--</head>--%>
+<%--<body>--%>
+
+<jsp:include page="../include/header.jsp" />
 
 <h1>This is success page.Login successful</h1>
 
@@ -12,5 +14,7 @@ Logged in user = <b>${loggedInUser }</b> ( from response model )
 <br>
 <a href="/logout">Logout</a>
 
-</body>
-</html>
+<jsp:include page="../include/footer.jsp" />
+
+<%--</body>--%>
+<%--</html>--%>

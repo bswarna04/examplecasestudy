@@ -1,6 +1,8 @@
 package perscholas.controller;
 
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -22,6 +24,8 @@ import java.util.List;
 @Controller
 @RequestMapping("/registration-url-path")
 public class RegistrationController {
+
+    public static final Logger LOG = LoggerFactory.getLogger(RegistrationController.class);
 
     @Autowired
     private UserDAO userDao;
@@ -124,7 +128,8 @@ public class RegistrationController {
             user.setUsername(form.getUsername());
 
             userDao.save(user);
-            response.setViewName("redirect:/login");
+           // response.setViewName("redirect:/login");
+            response.setViewName("registration/register");
         }
 
         return response;
@@ -134,7 +139,7 @@ public class RegistrationController {
     public ModelAndView delete(@RequestParam Integer id) throws Exception {
 
         ModelAndView response = new ModelAndView();
-        response.setViewName("redirect:/login");
+        response.setViewName("redirect:/registration-url-path/userList");
 
         User delete= userDao.findById(id);
         if(delete !=null){

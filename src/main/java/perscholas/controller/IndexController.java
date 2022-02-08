@@ -20,36 +20,36 @@ public class IndexController {
         return response;
     }
 
-    @RequestMapping(value = "/indexSubmit", method = RequestMethod.GET)
-
-    public ModelAndView indexSubmit(HttpServletRequest request, HttpSession session) throws Exception {
-
-          String firstname=request.getParameter("firstname");
-        String lastname=request.getParameter("lastname");
-
-
-        System.out.println("name = " + request.getParameter("firstname") );
-        System.out.println("lastname = " + request.getParameter("lastname") );
-        System.out.println("email = " + request.getParameter("email") );
-        System.out.println("password = " + request.getParameter("password") );
-        System.out.println("confirmpassword = " + request.getParameter("confirmpassword") );
-        System.out.println("dateofbirth = " + request.getParameter("dob") );
-        System.out.println("Registerbutton = " + request.getParameter("formsubmit") );
-
-
-
-        ModelAndView response = new ModelAndView();
-        response.addObject("firstname",firstname);
-        response.addObject("lastname",lastname);
-
-
-        response.addObject("firstname", firstname);
-        response.addObject("lastname", lastname);
-
-        response.setViewName("indexsubmit");
-
-        return response;
-
-    }
-
+//    @RequestMapping(value = "/indexSubmit", method = RequestMethod.GET)
+//
+//    public ModelAndView indexSubmit(HttpServletRequest request, HttpSession session) throws Exception {
+//
+//          String firstname=request.getParameter("firstname");
+//        String lastname=request.getParameter("lastname");
+//
+//
+//        System.out.println("name = " + request.getParameter("firstname") );
+//        System.out.println("lastname = " + request.getParameter("lastname") );
+//        System.out.println("email = " + request.getParameter("email") );
+//        System.out.println("password = " + request.getParameter("password") );
+//        System.out.println("confirmpassword = " + request.getParameter("confirmpassword") );
+//        System.out.println("dateofbirth = " + request.getParameter("dob") );
+//        System.out.println("Registerbutton = " + request.getParameter("formsubmit") );
+//
+//
+//
+//        ModelAndView response = new ModelAndView();
+//        response.addObject("firstname",firstname);
+//        response.addObject("lastname",lastname);
+//
+//
+//        response.addObject("firstname", firstname);
+//        response.addObject("lastname", lastname);
+//
+//        response.setViewName("indexsubmit");
+//
+//        return response;
+//
+//    }
+//
 }

@@ -1,5 +1,6 @@
-<html>
-<body style="background: lightgray ">
+<%--<html>--%>
+<%--<body style="background: lightgray ">--%>
+<jsp:include page="include/header.jsp" />
 <h1>Registration form </h1>
 <form method="get" action="/indexSubmit">
 <%--    <label>First Name </label>--%>
@@ -23,5 +24,7 @@
     <input type="submit" name="formsubmit" value="Register">
 
 </form>
-</body>
-</html>
+<%--</body>--%>
+<%--</html>--%>
+<jsp:include page="include/footer.jsp" />
+
